@@ -3,8 +3,9 @@
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
-	<link rel="stylesheet" href="./assets/style.css" />
+	<link rel="preload" href="./assets/bootstrap/bootstrap.min.css" as="style"
+		onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="./assets/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
@@ -15,24 +16,25 @@
 		content="Nina Carducci, photographe passionnée, saisit les moments, les émotions et les rend immortels à travers ses photos. Découvrez son travail." />
 	<meta name="keywords" content="Nina Carducci, photographe, photo, moments, émotions" />
 	<meta name="author" content="Nina Carducci" />
-	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="./assets/maugallery.js"></script>
-	<script src="./assets/scripts.js"></script>
 	<meta property="og:image" content="https://images.app.goo.gl/ruN3zp5hXire6t459" />
 	<meta property="og:title" content="Nina Carducci, photographe professionnelle pour vos événements à Bordeaux" />
 	<meta property="og:description"
 		content="En tant que photographe professionnelle, je capture des moments, des émotions, des situations et des endroits pour les rendre immortels. Laissez-moi vous aider à figer votre bonheur et à le partager avec les personnes importantes à vos yeux." />
 	<meta property="og:url" content="https://github.com/Jigoruma/nina-carducci.github.io.git" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Nina Carducci, photographe professionnelle pour vos événements à Bordeaux" />
+	<meta name="twitter:description"
+		content="En tant que photographe professionnelle, je capture des moments, des émotions, des situations et des endroits pour les rendre immortels. Laissez-moi vous aider à figer votre bonheur et à le partager avec les personnes importantes à vos yeux." />
+	<meta name="twitter:image" content="https://images.app.goo.gl/ruN3zp5hXire6t459" />
+	<meta name="twitter:url" content="https://github.com/Jigoruma/nina-carducci.github.io.git" />
 	<title>Nina Carducci, photographe professionnelle à Bordeaux</title>
 </head>
 
 <body>
 	<div class="top-header">
 		<h1 class="name">Nina Carducci</h1>
-		<div class="nav">
-			<ul role="navigation">
+		<div class="nav" role="navigation">
+			<ul>
 				<li><a href="#about">À propos</a></li>
 				<li><a href="#gallery">Galerie</a></li>
 				<li><a href="#services">Service</a></li>
@@ -82,16 +84,16 @@
 	</div>
 	<div id="about">
 		<div class="picture left">
-			<img src="./assets/images/nina.webp" alt="Portrait Nina, photographe" />
+			<img src="./assets/images/nina.webp" width="440px" height="440px" alt="Portrait Nina, photographe" />
 		</div>
 		<div id="about-me">
 			<h2 class="about-me__title">A propos de moi</h2>
-			<h3 class="about-me__introduction" role="introduction">
+			<h3 class="about-me__introduction">
 				Devenir photographe était pour moi une évidence. Comme si j’y étais
 				prédestiné. Saisir un moment, une émotion, une situation, un endroit,
 				une lumière et les rendre immortels, voilà ce qui me fait vibrer.
 			</h3>
-			<p role="description">
+			<p>
 				Nous passons notre vie à chercher le bonheur, et lorsque nous y
 				touchons, nous n’avons qu’une envie : le figer au travers de
 				photographies pour le savourer avec les personnes qui sont importantes
@@ -103,36 +105,71 @@
 			</p>
 		</div>
 	</div>
-	<div id="gallery" role="portfolio">
+	<div id="gallery">
 		<h3 class="title">Portfolio</h3>
 		<div class="container py-3">
 			<div class="gallery" style="display: none">
 				<img data-gallery-tag="Concert" class="gallery-item"
-					src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp"
-					alt="Photo d’un concert avec une foule et un groupe sur scène" />
+					src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" srcset="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp 320w,
+					./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp 480w,
+					./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp 800w" sizes="(max-width: 320px) 280px,
+				(max-width: 480px) 440px,
+				800px" alt="Photo d’un concert avec une foule et un groupe sur scène" />
 				<img data-gallery-tag="Entreprises" class="gallery-item"
-					src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp"
+					src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" srcset="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp 320w,
+					./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp 480w,
+					./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp 800w" sizes="(max-width: 320px) 280px,
+				(max-width: 480px) 440px,
+				800px"
 					alt="Photo d’un homme en costume noir avec une chemise blanche et une cravate rouge" />
 				<img data-gallery-tag="Entreprises" class="gallery-item"
-					src="./assets/images/gallery/entreprise/jason-goodman-tho1-oukbg0-unsplash.webp"
+					src="./assets/images/gallery/entreprise/jason-goodman-tho1-oukbg0-unsplash.webp" srcset="./assets/images/gallery/entreprise/jason-goodman-tho1-oukbg0-unsplash.webp 320w,
+					./assets/images/gallery/entreprise/jason-goodman-tho1-oukbg0-unsplash.webp 480w,
+					./assets/images/gallery/entreprise/jason-goodman-tho1-oukbg0-unsplash.webp 800w" sizes="(max-width: 320px) 280px,
+				(max-width: 480px) 440px,
+				800px"
 					alt="Photo de deux personnes dans un bureau lumineux" />
 				<img data-gallery-tag="Mariages" class="gallery-item"
-					src="./assets/images/gallery/mariage/hannah-busing-rvf2r-qmprk-unsplash.webp"
+					src="./assets/images/gallery/mariage/hannah-busing-rvf2r-qmprk-unsplash.webp" srcset="./assets/images/gallery/mariage/hannah-busing-rvf2r-qmprk-unsplash.webp 320w,
+					./assets/images/gallery/mariage/hannah-busing-rvf2r-qmprk-unsplash.webp 480w,
+					./assets/images/gallery/mariage/hannah-busing-rvf2r-qmprk-unsplash.webp 800w" sizes="(max-width: 320px) 280px,
+				(max-width: 480px) 440px,
+				800px"
 					alt="Photo de deux mains se tendant l’une vers l’autre dans un geste doux et affectueux" />
 				<img data-gallery-tag="Portrait" class="gallery-item"
-					src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp"
+					src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp" srcset="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp 320w,
+					./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp 480w,
+					./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp 800w" sizes="(max-width: 320px) 280px,
+				(max-width: 480px) 440px,
+				800px"
 					alt="Photo d’une personne en t-shirt noir avec collier" />
 				<img data-gallery-tag="Mariages" class="gallery-item"
-					src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp"
+					src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp" srcset="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp 320w,
+					./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp 480w,
+					./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp 800w" sizes="(max-width: 320px) 280px,
+				(max-width: 480px) 440px,
+				800px"
 					alt="Photo d’un couple en tenue de mariage marchant main dans la main" />
 				<img data-gallery-tag="Portrait" class="gallery-item"
-					src="./assets/images/gallery/portraits/van-prattenburg-443cl1ur-8-unsplash.webp"
+					src="./assets/images/gallery/portraits/van-prattenburg-443cl1ur-8-unsplash.webp" srcset="./assets/images/gallery/portraits/van-prattenburg-443cl1ur-8-unsplash.webp 320w,
+					./assets/images/gallery/portraits/van-prattenburg-443cl1ur-8-unsplash.webp 480w,
+					./assets/images/gallery/portraits/van-prattenburg-443cl1ur-8-unsplash.webp 800w" sizes="(max-width: 320px) 280px,
+				(max-width: 480px) 440px,
+				800px"
 					alt="Photo d’une personne en haut noir et jeans devant une clôture" />
 				<img data-gallery-tag="Concert" class="gallery-item"
-					src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp"
+					src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp" srcset="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp 320w,
+					./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp 480w,
+					./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp 800w" sizes="(max-width: 320px) 280px,
+				(max-width: 480px) 440px,
+				800px"
 					alt="Photo d’une personne sur scène avec la main en l’air" />
 				<img data-gallery-tag="Entreprises" class="gallery-item"
-					src="./assets/images/gallery/entreprise/s-campos-felipe-fsgzm8n0hiy-unsplash.webp"
+					src="./assets/images/gallery/entreprise/s-campos-felipe-fsgzm8n0hiy-unsplash.webp" srcset="./assets/images/gallery/entreprise/s-campos-felipe-fsgzm8n0hiy-unsplash.webp 320w,
+					./assets/images/gallery/entreprise/s-campos-felipe-fsgzm8n0hiy-unsplash.webp 480w,
+					./assets/images/gallery/entreprise/s-campos-felipe-fsgzm8n0hiy-unsplash.webp 800w" sizes="(max-width: 320px) 280px,
+				(max-width: 480px) 440px,
+				800px"
 					alt="Photo d’une personne travaillant dans un bureau lumineux" />
 			</div>
 		</div>
@@ -146,14 +183,16 @@
 						Toutes les photos sont exactes. Aucune d’elles n’est la vérité.
 					</h3>
 				</blockquote>
-				<figcaption class="quote__author" aria-label="auteur">- Richard Avedon</figcaption>
+				<figcaption class="quote__author" aria-label="auteur">
+					- Richard Avedon
+				</figcaption>
 			</figure>
 		</div>
 	</div>
 	<div id="services">
 		<h2 class="title">Mes services</h2>
 		<div class="container">
-			<div class="service" role="informations" aria-label="shooting photo">
+			<div class="service" aria-label="shooting photo">
 				<div class="service__description">
 					<h3>Shooting photo</h3>
 					<p>
@@ -167,7 +206,7 @@
 					<span>Matériel, déplacement inclus</span>
 				</div>
 			</div>
-			<div class="service" role="informations" aria-label="retouches">
+			<div class="service" aria-label="retouches">
 				<div class="service__description">
 					<h3>Retouches</h3>
 					<p>
@@ -180,7 +219,7 @@
 					<span>2 AR par photo</span>
 				</div>
 			</div>
-			<div class="service" role="informations" aria-label="album photos">
+			<div class="service" aria-label="album photos">
 				<div class="service__description">
 					<h3>Album photos</h3>
 					<p>
@@ -207,14 +246,14 @@
 			<figcaption class="quote__author">- Richard Avedon</figcaption>
 		</figure>
 	</div>
-	<div id="contact" role="contact" aria-label="formulaire de contact">
+	<div id="contact" aria-label="formulaire de contact">
 		<div class="container">
 			<div class="form-container">
 				<h2>Une question ? Une demande de devis ?</h2>
 				<p>
 					N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures
 				</p>
-				<form action="" method="post" role="form">
+				<form action="" method="post">
 					<label for="nom">Nom</label>
 					<input type="text" name="nom" id="nom" />
 					<label for="email">Email</label>
@@ -224,11 +263,29 @@
 					<input type="submit" value="Envoyer" />
 				</form>
 			</div>
-			<div class="picture right" role="img">
-				<img src="./assets/images/camera.webp" alt="appareil photo vintage sur un fond sombre" />
+			<div class="picture right">
+				<img src="./assets/images/camera.webp" width="440px" height="440px" alt="appareil photo vintage sur un fond sombre" />
 			</div>
 		</div>
 	</div>
+	<div class="hidden-schema">
+		<div itemscope itemtype="http://schema.org/LocalBusiness">
+			<span itemprop="name">Nina Carducci Photographie</span>
+			<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<span itemprop="streetAddress">68 avenue Alsace-Lorraine</span>
+				<span itemprop="addressLocality">Bordeaux</span>,
+				<span itemprop="postalCode">33200</span>
+			</div>
+			<span itemprop="telephone">05 56 67 78 89</span>
+			<time itemprop="openingHours" datetime="Mo-Fr 10:00-19:00">Réponse par téléphone du lundi au vendredi de 10
+				h à 19 h</time>
+		</div>
+	</div>
+	<script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="./assets/maugallery.js"></script>
+	<script src="./assets/scripts.js"></script>
 </body>
 
 </html>
